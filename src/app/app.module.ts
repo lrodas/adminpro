@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 //Modulos
 import { PagesModule } from './pages/pages.module';
@@ -22,7 +23,8 @@ import { APP_ROUTING } from './app.routes';
   imports: [
     BrowserModule,
     APP_ROUTING,
-    PagesModule
+    PagesModule,
+    FormsModule
   ],
   providers: [
     SharedsService,
