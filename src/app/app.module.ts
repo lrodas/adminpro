@@ -7,10 +7,9 @@ import { PagesModule } from './pages/pages.module';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
-
-import { SharedsService } from './services/shareds.service';
-import { SidebarService } from './services/sidebar.service';
 import { RegisterComponent } from './login/register.component';
+
+import { ServiceModule } from './services/service.module';
 
 import { APP_ROUTING } from './app.routes';
 
@@ -24,11 +23,11 @@ import { APP_ROUTING } from './app.routes';
     BrowserModule,
     APP_ROUTING,
     PagesModule,
-    FormsModule
+    FormsModule,
+    ServiceModule
   ],
   providers: [
-    SharedsService,
-    SidebarService
+
   ],
   bootstrap: [AppComponent]
 })

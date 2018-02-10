@@ -8,6 +8,7 @@ import { ProgressComponent } from './progress/progress.component';
 import { GraficasComponent } from './graficas/graficas.component';
 import { NopagefoundComponent } from '../shared/nopagefound/nopagefound.component';
 import { GraficoDonaComponent } from '../components/grafico-dona/grafico-dona.component';
+import { AccountSettingComponent } from './account-setting/account-setting.component';
 
 import { SharedModule } from '../shared/shared.module';
 import { PAGES_ROUTING } from './pages.routes';
@@ -25,7 +26,8 @@ import { IncrementadorComponent } from '../components/incrementador/incrementado
     PagesComponent,
     NopagefoundComponent,
     IncrementadorComponent,
-    GraficoDonaComponent
+    GraficoDonaComponent,
+    AccountSettingComponent
   ],
   exports:[
     DashboardComponent,
