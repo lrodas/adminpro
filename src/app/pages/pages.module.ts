@@ -16,6 +16,8 @@ import { ChartsModule } from 'ng2-charts';
 
 //Temporal
 import { IncrementadorComponent } from '../components/incrementador/incrementador.component';
+import { PromesasComponent } from './promesas/promesas.component';
+import { RxjsComponent } from './rxjs/rxjs.component';
 
 
 @NgModule({
@@ -27,7 +29,9 @@ import { IncrementadorComponent } from '../components/incrementador/incrementado
     NopagefoundComponent,
     IncrementadorComponent,
     GraficoDonaComponent,
-    AccountSettingComponent
+    AccountSettingComponent,
+    PromesasComponent,
+    RxjsComponent
   ],
   exports:[
     DashboardComponent,
