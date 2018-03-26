@@ -1,3 +1,4 @@
+export { SubirArchivoService } from './subirArchivo/subir-archivo.service';
 export { LoginGuardGuard } from './guards/login-guard.guard';
 export { SettingsService } from './serttings/settings.service';
 export { SharedsService } from './shared/shareds.service';

@@ -9,7 +9,7 @@ import { Title, Meta, MetaDefinition } from '@angular/platform-browser';
 })
 export class BreadcrumbsComponent implements OnInit {
 
-  label: string = '';
+  label = '';
 
   constructor(
         private router: Router,
@@ -17,12 +17,11 @@ export class BreadcrumbsComponent implements OnInit {
         public meta: Meta
        ) {
     this.getDataRoute()
-      .subscribe( data =>{
-        console.log( data );
+      .subscribe( data => {
         this.label = data.titulo;
         this.title.setTitle( this.label );
 
-        let metaTag: MetaDefinition = {
+        const metaTag: MetaDefinition = {
           name: 'description',
           content: this.label
         };
@@ -32,11 +31,11 @@ export class BreadcrumbsComponent implements OnInit {
       });
   }
 
-  getDataRoute(){
+  getDataRoute() {
     return this.router.events
       .filter( event => event instanceof ActivationEnd )
       .filter( ( event: ActivationEnd ) => event.snapshot.data.titulo != null)
-      .map( ( event: ActivationEnd ) => event.snapshot.data )
+      .map( ( event: ActivationEnd ) => event.snapshot.data );
   }
 
   ngOnInit() {
