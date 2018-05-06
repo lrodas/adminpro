@@ -1,5 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Observable, Subscription } from 'rxjs/Rx';
+import { Subscription } from 'rxjs/Subscription';
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/retry';
 
 @Component({
   selector: 'app-rxjs',
@@ -24,7 +26,7 @@ export class RxjsComponent implements OnInit, OnDestroy {
   ngOnInit() {
   }
 
-  ngOnDestroy(){
+  ngOnDestroy() {
     this.susbcription.unsubscribe();
   }
 
@@ -34,13 +36,13 @@ export class RxjsComponent implements OnInit, OnDestroy {
 
       let contador = 0;
 
-      let intervalo = setInterval( () => {
+      const intervalo = setInterval( () => {
 
         contador += 1;
 
-        let salida = {
-          valor:contador
-        }
+        const salida = {
+          valor: contador
+        };
 
         observer.next( salida );
 
@@ -62,9 +64,9 @@ export class RxjsComponent implements OnInit, OnDestroy {
     })
     .filter( (valor, index) => {
 
-        if( (valor % 2) === 1 ){
+        if ( (valor % 2) === 1 ) {
           return true;
-        }else{
+        } else {
           return false;
         }
     });

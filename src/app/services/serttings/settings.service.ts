@@ -7,31 +7,31 @@ export class SettingsService {
   ajustes: Ajustes = {
     temaUrl: 'assets/css/colors/default.css',
     tema: 'default'
-  }
+  };
 
   constructor( @Inject( DOCUMENT ) private _document ) {
     this.cargarAjustes();
   }
 
-  guardarAjustes(){
+  guardarAjustes() {
     localStorage.setItem( 'ajustes', JSON.stringify( this.ajustes ) );
   }
 
-  cargarAjustes(){
-    if( localStorage.getItem( 'ajustes' ) ){
+  cargarAjustes() {
+    if ( localStorage.getItem( 'ajustes' ) ) {
       this.ajustes = JSON.parse( localStorage.getItem( 'ajustes' ) );
 
       this.aplicarTema( this.ajustes.tema );
 
-    }else{
+    } else {
 
       this.aplicarTema( this.ajustes.tema );
     }
   }
 
-  aplicarTema( tema: string ){
+  aplicarTema( tema: string ) {
 
-    let url = `assets/css/colors/${ tema }.css`
+    const url = `assets/css/colors/${ tema }.css`;
     this._document.getElementById( 'tema' ).setAttribute( 'href', url);
 
     this.ajustes.tema = tema;
@@ -42,7 +42,7 @@ export class SettingsService {
 
 }
 
-interface Ajustes{
-  temaUrl:string;
-  tema:string;
+interface Ajustes {
+  temaUrl: string;
+  tema: string;
 }

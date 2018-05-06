@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
-import swal from 'sweetalert'
+import swal from 'sweetalert';
 import { UsuarioService } from '../services/service.index';
 import { Usuario } from '../models/usuario.model';
 
@@ -22,13 +22,13 @@ export class RegisterComponent implements OnInit {
     public router: Router
   ) { }
 
-  sonIguales(campo1: string, campo2: string){
+  sonIguales(campo1: string, campo2: string) {
 
-    return (group: FormGroup)=>{
-      let pass1 = group.controls[campo1].value;
-      let pass2 = group.controls[campo2].value;
+    return (group: FormGroup) => {
+      const pass1 = group.controls[campo1].value;
+      const pass2 = group.controls[campo2].value;
 
-      if(pass1 === pass2){
+      if (pass1 === pass2) {
         return null;
       }
       return {
@@ -56,20 +56,20 @@ export class RegisterComponent implements OnInit {
       password: '123456',
       password2: '123456',
       condiciones: true
-    })
+    });
 
   }
 
-  registrarUsuario(){
-    if(this.forma.invalid){
+  registrarUsuario() {
+    if (this.forma.invalid) {
       return;
     }
-    if(!this.forma.value.condiciones){
-      swal("Importante", "Debe de aceptar la condiciones", "warning");
+    if (!this.forma.value.condiciones) {
+      swal('Importante', 'Debe de aceptar la condiciones', 'warning');
       return;
     }
 
-    let usuario = new Usuario(
+    const usuario = new Usuario(
       this.forma.value.nombre,
       this.forma.value.apellido,
       this.forma.value.correo,

@@ -7,7 +7,6 @@ import { PagesComponent } from './pages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProgressComponent } from './progress/progress.component';
 import { GraficasComponent } from './graficas/graficas.component';
-import { NopagefoundComponent } from '../shared/nopagefound/nopagefound.component';
 import { GraficoDonaComponent } from '../components/grafico-dona/grafico-dona.component';
 import { AccountSettingComponent } from './account-setting/account-setting.component';
 
@@ -36,8 +35,6 @@ import { BusquedaComponent } from './busqueda/busqueda.component';
     DashboardComponent,
     ProgressComponent,
     GraficasComponent,
-    PagesComponent,
-    NopagefoundComponent,
     IncrementadorComponent,
     GraficoDonaComponent,
     AccountSettingComponent,
@@ -45,7 +42,6 @@ import { BusquedaComponent } from './busqueda/busqueda.component';
     RxjsComponent,
     ProfileComponent,
     UsuariosComponent,
-    ModalUploadComponent,
     HospitalesComponent,
     MedicosComponent,
     MedicoComponent,
@@ -54,9 +50,7 @@ import { BusquedaComponent } from './busqueda/busqueda.component';
   exports: [
     DashboardComponent,
     ProgressComponent,
-    GraficasComponent,
-    PagesComponent,
-    NopagefoundComponent
+    GraficasComponent
   ],
   imports: [
     CommonModule,

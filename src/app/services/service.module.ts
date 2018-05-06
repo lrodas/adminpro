@@ -11,7 +11,8 @@ import {
   AdminGuard,
   SubirArchivoService,
   HospitalService,
-  MedicoService
+  MedicoService,
+  VerificaTokenGuard
 } from './service.index';
 
 @NgModule({
@@ -29,7 +30,8 @@ import {
     SubirArchivoService,
     ModalUploadService,
     HospitalService,
-    MedicoService
+    MedicoService,
+    VerificaTokenGuard
   ],
   declarations: []
 })
